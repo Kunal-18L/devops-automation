@@ -1,0 +1,15 @@
+---
+# tasks file for roles/java
+- name: Update apt cache
+  apt:
+    update_cache: yes
+
+- name: Install OpenJDK 21
+  apt:
+    name: "{{ java_package }}"
+    state: present
+
+- name: Create information file
+  template:
+    src: info.j2
+    dest: /tmp/info.txt

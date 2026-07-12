@@ -1,5 +1,9 @@
 ---
-- import_playbook: java.yml
-- import_playbook: git.yml
-- import_playbook: maven.yml
-- import_playbook: docker.yml
+- hosts: servers
+  become: yes
+
+  roles:
+    - java
+    - git
+    - maven
+    - docker
