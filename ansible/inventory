@@ -1,2 +1,2 @@
 [servers]
-13.233.36.96 ansible_user=ubuntu ansible_ssh_private_key_file=~/aws-linux.pem
+65.2.150.198 ansible_user=ubuntu ansible_ssh_private_key_file=~/aws-linux.pem

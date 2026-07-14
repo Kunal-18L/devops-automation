@@ -1,28 +1,15 @@
 ---
 # tasks file for roles/sonarqube
-- name: Install Java
-  apt:
-    name: openjdk-21-jdk
-    state: present
-    update_cache: yes
+- name: Pull SonarQube image
+  community.docker.docker_image:
+    name: sonarqube:lts-community
+    source: pull
 
-- name: Download SonarQube
-  get_url:
-    url: https://binaries.sonarsource.com/Distribution/sonarqube-25.6.0.109173.zip
-    dest: /tmp/sonarqube.zip
-
-- name: Install unzip
-  apt:
-    name: unzip
-    state: present
-
-- name: Extract SonarQube
-  unarchive:
-    src: /tmp/sonarqube.zip
-    dest: /opt/
-    remote_src: yes
-
-- name: Rename SonarQube directory
-  command: mv /opt/sonarqube-25.6.0.109173 /opt/sonarqube
-  args:
-    creates: /opt/sonarqube
+- name: Run SonarQube container
+  community.docker.docker_container:
+    name: sonarqube
+    image: sonarqube:lts-community
+    state: started
+    restart_policy: unless-stopped
+    published_ports:
+      - "9000:9000"
