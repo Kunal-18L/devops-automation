@@ -8,3 +8,4 @@
     - maven
     - docker
     - jenkins
+    - sonarqube

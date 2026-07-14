@@ -4,6 +4,11 @@ resource "aws_instance" "terraform_demo" {
   key_name               = "aws-linux"
   vpc_security_group_ids = [aws_security_group.terraform_sg.id]
 
+  root_block_device {
+    volume_size = 20
+    volume_type = "gp3"
+  }
+
   tags = {
     Name = var.instance_name
   }
