@@ -25,23 +25,20 @@ This project demonstrates an end-to-end CI/CD pipeline for a Java Maven web appl
 
 '''
 devops-automation/
-|__ ansible/
-|   |__inventory
-|   |__site.yml
-|   |__roles/
-|
-|___kubernetes/
-|   |__deployment.yml
-|   |__service.yaml
-|
-|__terraform/
-|  |__main.tf
-|  |__variables.tf
-|  |__outputs.tf
-|
-|__Jenkinsfile
-|__README.md
-|__.gitignore
+├── ansible/
+│   ├── inventory
+│   ├── site.yml
+│   └── roles/
+├── kubernetes/
+│   ├── deployment.yml
+│   └── service.yaml
+├── terraform/
+│   ├── main.tf
+│   ├── variables.tf
+│   └── outputs.tf
+├── Jenkinsfile
+├── README.md
+└── .gitignore
 
 '''
 
