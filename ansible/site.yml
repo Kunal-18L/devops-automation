@@ -9,3 +9,8 @@
     - docker
     - jenkins
     - sonarqube
+
+- hosts: kubernetes
+  become: yes
+  roles:
+    - kubernetes
