@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: java-maven-webapp
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: java-maven-webapp
+  template:
+    metadata:
+      labels:
+        app: java-maven-webapp
+    spec:
+      containers:
+        - name: java-maven-webapp
+          image: kunal18l/java-maven-webapp:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
+

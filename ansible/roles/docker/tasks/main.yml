@@ -23,7 +23,7 @@
     append: yes
 
 - name: Add jenkins user to docker group
-  amsible.uiltin.user:
+  ansible.builtin.user:
     name: jenkins
     groups: docker
     append: yes

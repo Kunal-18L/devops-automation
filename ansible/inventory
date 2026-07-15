@@ -1,6 +1,6 @@
 [servers]
-65.2.150.198 ansible_user=ubuntu ansible_ssh_private_key_file=~/aws-linux.pem
+3.110.123.45 ansible_user=ubuntu ansible_ssh_private_key_file=~/aws-linux.pem
 
 [kubernetes]
-13.233.101.47 ansible_user=ubuntu ansible_ssh_private_key_file=~/aws-linux.pem
+3.110.88.62 ansible_user=ubuntu ansible_ssh_private_key_file=~/aws-linux.pem
 
