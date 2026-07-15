@@ -1,19 +1,20 @@
-# End-to-End DevOps Automation Project
+# 🚀 End-to-End DevOps Automation Project
 
-## Project Overwiew
+## 📌 Project Overview
 
-This project demonstrates an end-to-end CI/CD pipeline for a Java Maven web applicationusing modern DevOps tools. The infrastructure is provisioned with Terraform, configured using Ansible, integrated with Jenkins for CI, analyzed using SonarQube, containerized with Docker, stored in Docker Hub, and deployed to Kubernetes (Minikube) on AWS EC2.
+This project demonstrates an end-to-end CI/CD pipeline for a Java Maven web application using modern DevOps tools. The infrastructure is provisioned with Terraform, configured using Ansible, integrated with Jenkins for CI, analyzed using SonarQube, containerized with Docker, stored in Docker Hub, and deployed to Kubernetes (Minikube) on AWS EC2.
 
 ---
 
-## Tech Stack
+## 🛠️ Tech Stack
+
 - AWS EC2
 - Terraform
 - Ansible
 - Git & GitHub
 - Jenkins
 - Maven
-- SOnarQube
+- SonarQube
 - Docker
 - Docker Hub
 - Kubernetes (Minikube)
@@ -21,9 +22,9 @@ This project demonstrates an end-to-end CI/CD pipeline for a Java Maven web appl
 
 ---
 
-## Project Structure
+## 📂 Project Structure
 
-'''
+```
 devops-automation/
 ├── ansible/
 │   ├── inventory
@@ -31,7 +32,7 @@ devops-automation/
 │   └── roles/
 ├── kubernetes/
 │   ├── deployment.yml
-│   └── service.yaml
+│   └── service.yml
 ├── terraform/
 │   ├── main.tf
 │   ├── variables.tf
@@ -39,14 +40,13 @@ devops-automation/
 ├── Jenkinsfile
 ├── README.md
 └── .gitignore
-
-'''
+```
 
 ---
 
-## CI/CD Workflow
+## ⚙️ CI/CD Workflow
 
-1. Developer pushes code to gitHub.
+1. Developer pushes code to GitHub.
 2. Jenkins clones the repository.
 3. Maven builds the Java application.
 4. SonarQube performs code quality analysis.
@@ -56,8 +56,8 @@ devops-automation/
 8. Application becomes available through a Kubernetes Service.
 
 ---
- 
-## Infrastructure
+
+## ☁️ Infrastructure
 
 Infrastructure is provisioned using **Terraform**, including:
 
@@ -67,19 +67,30 @@ Infrastructure is provisioned using **Terraform**, including:
 
 ---
 
-## Docker
+## 🔧 Configuration Management
 
-Docker is used to containerize the JavaMaven application.
+Using **Ansible**, the following components are installed and configured:
 
-Image Repository:
-
-'''
-kunal18l/java-maven-webapp
-'''
+- Docker
+- Jenkins
+- kubectl
+- Minikube
 
 ---
 
-## Kubernetes
+## 🐳 Docker
+
+Docker is used to containerize the Java Maven application.
+
+Image Repository:
+
+```
+kunal18l/java-maven-webapp
+```
+
+---
+
+## ☸️ Kubernetes
 
 Application deployment is managed using:
 
@@ -88,29 +99,29 @@ Application deployment is managed using:
 
 Useful commands:
 
-'''bash
+```bash
 kubectl get deployments
 kubectl get pods
 kubectl get svc
-'''
+```
 
 ---
 
-## How to Run
+## ▶️ How to Run
 
 ### Terraform
 
-'''bash
+```bash
 terraform init
 terraform plan
 terraform apply
-'''
+```
 
 ### Ansible
 
-'''bash
+```bash
 ansible-playbook -i inventory site.yml
-'''
+```
 
 ### Jenkins
 
@@ -123,19 +134,27 @@ Run the Jenkins pipeline to:
 
 ### Kubernetes
 
-'''bash
+```bash
 kubectl apply -f deployment.yml
-kubectl apply -f service.yaml
-'''
+kubectl apply -f service.yml
+```
 
 ---
 
-## Screenshots
+## 📸 Screenshots
 
+Add screenshots for:
+
+- Jenkins Successful Pipeline
+- SonarQube Dashboard
+- Docker Hub Repository
+- Kubernetes Pods
+- Kubernetes Services
+- Running Application
 
 ---
 
-## Future Improvements:
+## 🚀 Future Improvements
 
 - GitHub Webhooks
 - Automatic Kubernetes Deployment from Jenkins
@@ -147,8 +166,8 @@ kubectl apply -f service.yaml
 
 ---
 
-## Author
+## 👨‍💻 Author
 
-Kunal
+Karan
 
-GitHun: https://github.com/Kunal-18L
+GitHub: https://github.com/Kunal-18L
