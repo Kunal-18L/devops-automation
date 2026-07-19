@@ -168,6 +168,6 @@ Screenshots for:
 
 ## 👨‍💻 Author
 
-Karan
+Kunal Landge
 
 GitHub: https://github.com/Kunal-18L
