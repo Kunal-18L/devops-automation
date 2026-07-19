@@ -143,7 +143,7 @@ kubectl apply -f service.yml
 
 ## 📸 Screenshots
 
-Add screenshots for:
+Screenshots for:
 
 - Jenkins Successful Pipeline
 - SonarQube Dashboard
